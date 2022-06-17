@@ -1,0 +1,9 @@
+[
+    { "owner": "John", "car": "Dzire", "pickup": "Kolkata", "destination": "Bangalore", "available": "10" },
+    { "owner": "Jane", "car": "Etios", "pickup": "Bangalore", "destination": "Kolkata", "available": "4" },
+    { "owner": "Robert", "car": "Mazda", "pickup": "Bangalore", "destination": "Delhi", "available": "12" },
+    { "owner": "Chris", "car": "Scorpio", "pickup": "Delhi", "destination": "Bangalore", "available": "8" },
+    { "owner": "Clint", "car": "Harrier", "pickup": "Delhi", "destination": "Kolkata", "available": "1" },
+    { "owner": "Jack", "car": "Volvo", "pickup": "Kolkata", "destination": "Delhi", "available": "5" },
+    { "owner": "Tony", "car": "Audi", "pickup": "Kolkata", "destination": "Chennai", "available": "6" }
+]

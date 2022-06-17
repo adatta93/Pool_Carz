@@ -1,0 +1,33 @@
+<div class="landing">
+  <div class="landing-header">
+    <h1 style="color: #ffc107;">Pool Carz</h1>
+    <button (click)="onOfferRide()" class="btn btn-warning">Offer A Ride</button>
+  </div>
+  <!-- <button (click)="showAllRides()">{{showAllButton}}</button> -->
+  <div class="landing-text">Available Rides</div>
+  <div class="landing-body table-responsive">
+    <div class="filter-options">
+      <button (click)="filterOptn = ''" class="btn btn-warning">Clear Filters</button>
+      <button (click)="filterOptn = 'toKolkata'" class="btn btn-warning">To Kolkata</button>
+      <button (click)="filterOptn = 'fromKolkata'" class="btn btn-warning">From Kolkata</button>
+      <button (click)="filterOptn = 'others'" class="btn btn-warning">Others</button>
+    </div>
+    <table class="table">
+      <tr style="text-align: center">
+        <th>Pickup</th>
+        <th>Destination</th>
+        <th>Seats Available</th>
+      </tr>
+      <tr *ngFor="let ride of rideDetails | rideFilter: filterOptn" poolMouseHover (click)="onSelectRide(ride)"
+        style="text-align: center">
+        <td>{{ride.pickup}}</td>
+        <td>{{ride.destination}}</td>
+        <td>{{ride.available}}</td>
+      </tr>
+    </table>
+    <div *ngIf="rideBookedMsg !== ''" class="ride-book-msg">{{rideBookedMsg}}</div>
+  </div>
+  <div class="landing-details">
+    <app-ride-details *ngIf="rideSelected" [selectedRide]="rideSelected" (bookRide)="onBookRide($event)"></app-ride-details>
+  </div>
+</div>
